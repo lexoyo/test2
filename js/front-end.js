@@ -204,15 +204,12 @@ $(function() {
   /**
    * mobile menu
    */
-  $('.silex-runtime.enable-mobile .silex-pages .menu-button').click(function (e) {
-    e.stopPropagation();
+  $('.silex-runtime .silex-pages .menu-button').click(function () {
     $(document.body).toggleClass('show-mobile-menu');
   });
-  $('.silex-runtime.enable-mobile').click(function (e) {
-    $(document.body).removeClass('show-mobile-menu');
-  });
-  $('.silex-runtime.enable-mobile .silex-pages .page-element').click(function(e) {
+  $('.silex-runtime .silex-pages .page-element').click(function(e) {
     window.location.hash = '#!' + this.id;
+    $(document.body).removeClass('show-mobile-menu');
     e.preventDefault();
   });
 
